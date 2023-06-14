@@ -1,0 +1,277 @@
+::placeholder {
+  color: #747474;
+  font-size: 12px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background: #e0e0e0;
+  height: 100vh;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #202020;
+  cursor: pointer;
+}
+
+a,
+li,
+label {
+  font-size: 12px;
+}
+
+button {
+  border: none;
+  background: #ec1018;
+  color: white;
+  padding: 10px 40px;
+  cursor: pointer;
+}
+
+input {
+  height: 40px;
+  width: 100%;
+  border: 1px solid #ec1018;
+  margin-bottom: 10px;
+  padding: 20px 10px;
+}
+
+.main-content {
+  flex: 1 0 auto;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 40px 20px 0 20px; /* TRBL sau clockwise */
+  /* TOP RIGHT BOTTOM LEFT */
+  /* ai putea la fel de bine sa scrii:
+  padding-top: 40px;
+  padding-right: 20px;
+  padding-bottom: 0;
+  padding-left: 20px */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-body {
+  display: flex;
+  margin: 0 auto;
+}
+
+.content-left-col,
+.content-right-col {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-top: 30px;
+}
+
+.copyright-container {
+  padding: 18px 30px;
+  background: #c4c4c4;
+  text-align: center;
+}
+
+.copyright-info {
+  color: #ec1018;
+}
+
+.image-container {
+  width: 150px;
+}
+
+.image-logo {
+  width: 100%;
+  height: auto;
+}
+
+.icons-container {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.icon {
+  color: #ec1018;
+  font-size: 20px;
+}
+
+.icon:not(:last-child) {
+  margin-right: 25px;
+}
+
+.address-container,
+.email-container,
+.phone-container,
+.menu-container,
+.policy-container,
+.subscribe-container {
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.address-container,
+.menu-container {
+  line-height: 1.5;
+}
+
+.phone-container > a:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.schedule-container ul,
+.schedule-container-desktop ul,
+.menu-container {
+  list-style: none;
+}
+
+.schedule-container-desktop {
+  display: none;
+}
+
+.schedule-lists {
+  display: flex;
+}
+
+.schedule-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.schedule-list:first-child {
+  margin-right: 10px;
+}
+
+.schedule-container ul li:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.schedule-title,
+.subscribe-title {
+  margin-bottom: 20px;
+}
+
+.menu-container li {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.menu-container li a {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.menu-item {
+  position: relative;
+}
+
+.menu-item:hover .hidden-hover {
+  display: flex !important;
+}
+
+.hidden-hover {
+  display: none !important;
+  position: absolute;
+  background: white;
+  border: 1px solid #ec1018;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  animation: slideDown 50ms linear;
+}
+
+.hidden-hover-item {
+  padding: 10px 20px;
+  transition: all 0.1s ease-in-out;
+}
+
+.hidden-hover-item:hover {
+  background: #ec1018;
+  color: white;
+}
+
+.hidden-hover-item:not(:first-child) {
+  border-top: 1px solid #ec1018;
+}
+
+.dropdown-icon {
+  color: #202020;
+  margin-left: 5px;
+}
+
+.policy-container a:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.subscribe-container label {
+  margin-bottom: 5px;
+}
+
+@keyframes slideDown {
+  from {
+    top: -20px;
+    opacity: 0;
+  }
+
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@media only screen and (min-width: 1040px) {
+  footer {
+    height: unset;
+  }
+
+  .content {
+    flex-direction: row;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 0;
+  }
+
+  .content-header {
+    margin-right: 40px;
+    align-self: flex-start;
+  }
+
+  .content-left-col,
+  .content-right-col {
+    margin-top: 0;
+    width: unset;
+  }
+
+  .content-left-col {
+    margin-right: 40px;
+  }
+
+  .content-right-col {
+    flex-direction: row;
+  }
+
+  .menu-container,
+  .policy-container,
+  .subscribe-container {
+    margin-right: 40px;
+  }
+
+  .schedule-container {
+    display: none;
+  }
+
+  .schedule-container-desktop {
+    display: flex;
+    flex-direction: column;
+  }
+}
+

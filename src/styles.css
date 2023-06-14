@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+* {
+   margin: 0px;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+    font-family: "Roboto", Sans-serif;
+    color: #202020;
+    display: flex;
+    flex-direction: column;
+}
